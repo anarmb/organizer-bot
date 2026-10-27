@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Tarea {
+  id Int @id @default(autoincrement())
+  chatId BigInt
+  title String
+  text String?
+  dateTime DateTime 
+  done Boolean @default(false)
+  notified Boolean @default(false)
+  notifyAt DateTime?
+  createdBy BigInt
+  createdAt DateTime @default(now())
+  forWho String
+}

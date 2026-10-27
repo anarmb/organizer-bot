@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    margin: 16px;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cabecera h1 {
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+
+.cabecera button {
+    font-size: 16px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.aviso {
+    color: #b00020;
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.dia-semana {
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 0;
+}
+
+.dia {
+    border: 1px solid #ccc;
+    min-height: 80px;
+    padding: 4px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.dia.vacio {
+    border: none;
+}
+
+.dia.hoy {
+    border: 2px solid #1a73e8;
+}
+
+.numero-dia {
+    font-weight: bold;
+}
+
+.tarea.hecha {
+    color: #888;
+    text-decoration: line-through;
+}
